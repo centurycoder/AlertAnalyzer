@@ -1,0 +1,18 @@
+{% extends "Base.html" %}
+
+{% block content %}
+<form >
+    <label> Choose a Date </lable>
+    <input type="date" id="WhichDay" name="WhichDay" value={{day}} />
+    <input type="submit" name="submit" value="Query" />
+</form>
+<table class="slim">
+    {% for item in items %}
+    <tr>
+         <td> {{ item[0] }} </td>
+         <td> {{ item[1] }} </td>
+         <td> <a target="_blank" href=DetailByAppEvent.html?WhichDay={{day}}&App={{url_escape(item[0])}}&Event={{url_escape(item[1])}}>{{item[2]}}</a> </td>
+    </tr>
+    {% end %}
+</table>
+{% end %}

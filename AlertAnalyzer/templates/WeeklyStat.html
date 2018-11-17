@@ -1,0 +1,17 @@
+{% extends "Base.html" %}
+
+{% block content %}
+<form >
+    <label> Begin Date:  </lable>
+    <input type="date" id="StartDay" name="StartDay" value={{StartDay}} />
+    <label> End Date: </lable>
+    <input type="date" id="EndDay" name="EndDay" value={{EndDay}} />
+    <input type="submit" name="submit" value="Refresh" />
+</form>
+
+<div id="WeeklyTop10Panel" style="width:100%; height:400px;"></div>
+<div id="EventAppPanel" style="width:100%; height:400px;"></div>
+
+<script src="{{ static_url("js/WeeklyStat.js") }}"></script>
+{% end %}
+

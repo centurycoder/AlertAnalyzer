@@ -1,0 +1,30 @@
+{% extends "Base.html" %}
+
+{% block content %}
+<div class="table">
+    <div class="thead">
+        <div class="tr">
+            <div class="td">EventNameCN</div>
+            <div class="td">Owner</div>
+            <div class="td">SqlFilter</div>
+            <div class="td"></div>
+        </div>
+    </div>
+    <div class="tbody">
+        {% for set in settings %}
+        <form class="tr">
+            <div class="td EventNameCN"> {{ set[0] }}</div>
+            <div class="td Owner"> {{ set[1]}} </div>
+            <div class="td SqlFilter"> {{ set[2]}} </div>
+            <div class="td Button"><button type="button" onclick="editSetting(this);">edit</button></div>
+        </form>
+        {% end %}
+        <form class="tr" action="/Setting.html" method="post">
+            <div class="td"> <input type="textarea" name="newEventNameCN" /> </div>
+            <div class="td"> <input type="textarea" name="newOwner" /> </div>
+            <div class="td"> <input type="textarea" name="newSqlFilter" /> </div>
+            <div class="td Button"><button type="button" onclick="addSetting(this);">add</button></div>
+        </form>
+    </div>
+</div>
+{% end %}

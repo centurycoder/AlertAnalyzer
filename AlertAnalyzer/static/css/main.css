@@ -1,0 +1,60 @@
+nav {
+    width: 30%;
+    background-color: yellow
+}
+
+.container {
+  margin: 0 auto;
+  padding-left: 30px;
+  padding-right: 30px;
+  width: 80%;
+}
+
+.slim {
+  margin: 0 auto;
+  padding-left: 10%;
+  padding-right: 30%;
+  width: 80%;
+}
+
+table {
+  border-collapse: collapse;
+}
+th,
+td {
+  border: 1px solid #cecfd5;
+  padding: 10px 15px;
+}
+
+
+.table
+{
+    display:table;
+    border-collapse:separate;
+    border-spacing:2px;
+}
+.thead
+{
+    display:table-header-group;
+    color:white;
+    font-weight:bold;
+    background-color:grey;
+}
+.tbody
+{
+    display:table-row-group;
+}
+.tr
+{
+    display:table-row;
+}
+.td
+{
+    display:table-cell;
+    border:1px solid black;
+    padding:1px;
+}
+.tr.editing .td INPUT
+{
+    width:auto;
+}

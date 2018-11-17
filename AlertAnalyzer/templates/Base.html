@@ -1,0 +1,29 @@
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=8" />
+    <link rel="stylesheet" href="{{ static_url("css/main.css") }}"> </link>
+    <script src="{{ static_url("js/jquery-1.11.3.js") }}"></script>
+    <script src="{{ static_url("js/highcharts.js") }}"></script>
+    <script src="{{ static_url("js/DailyByEvent.js") }}"></script>
+    <script src="{{ static_url("js/Setting.js") }}"></script>
+</head>
+<body>
+    <header class="container">
+    <h2>集中监控事件统计分析工具</h2>
+    </header>
+    <nav class="container">
+        <a href="DailyByEvent.html">24小时统计（按类型）</a>
+        <a href="DailyByAppEvent.html">24小时统计（按应用+类型）</a>
+        <a href="WeeklyStat.html">7天报警数量走势</a>
+        <a href="Monthly.html">1月报警数量走势</a>
+        <a href="Quarterly.html">季度报警数量走势</a>
+	<a href="Setting.html">设置</a>
+    </nav>
+
+    <div>
+        {% block content %}
+        {% end %}
+    </div>
+</body>
+</html>
+

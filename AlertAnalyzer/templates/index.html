@@ -1,0 +1,27 @@
+<html>
+<head>
+    <link rel="stylesheet" href="static/css/main.css">
+</head>
+<body>
+    <nav class="container">
+        <a href="DailyByEvent.html">24小时统计（按类型）</a>
+        <a href="DailyByEventApp.html">24小时统计（按应用+类型）</a>
+        <a href="Weekly.html">7天报警数量走势</a>
+        <a href="Monthly.html">1月报警数量走势</a>
+        <a href="Quarterly.html">季度报警数量走势</a>
+    </nav>
+
+    <div class="container">
+        <table>
+            {% for item in items %}
+                <tr>
+                {% for cell in item %}
+                    <td> {{ cell }} </td>
+                {% end %}
+                </tr>
+            {% end %}
+        </table>
+    </div>
+</body>
+</html>
+
