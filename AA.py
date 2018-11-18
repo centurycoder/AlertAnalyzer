@@ -145,11 +145,13 @@ class SettingHandler(tornado.web.RequestHandler):
                 else:
                     self.write('OK')
 
+# where template files and static files are stored
 settings= {
     "template_path":"./templates",
     "static_path":"./static"
 }
 
+#route configuration
 application = tornado.web.Application([
     (r"/", DailyByEventHandler),
     (r"/DailyByEvent.html", DailyByEventHandler),
